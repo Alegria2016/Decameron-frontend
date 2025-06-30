@@ -9,6 +9,8 @@ RUN apk add --no-cache \
 # 2. Instala Composer globalmente
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer install --no-dev --optimize-autoloader --no-scripts --prefer-dist
+
 # 3. Instala extensiones PHP necesarias
 RUN docker-php-ext-install pdo pdo_pgsql
 
