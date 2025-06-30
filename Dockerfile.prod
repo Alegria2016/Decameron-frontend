@@ -1,7 +1,27 @@
 FROM php:8.2-fpm-alpine
-RUN apk add --no-cache postgresql-dev && docker-php-ext-install pdo pdo_pgsql
+
+# 1. Instala dependencias esenciales
+RUN apk add --no-cache \
+    postgresql-dev \
+    git \
+    unzip
+
+# 2. Instala Composer globalmente
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# 3. Instala extensiones PHP necesarias
+RUN docker-php-ext-install pdo pdo_pgsql
+
 WORKDIR /var/www/html
+
+# 4. Copia solo los archivos necesarios (mejor práctica)
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --optimize-autoloader --no-scripts
+
+# 5. Copia el resto del código
 COPY . .
-RUN composer install --no-dev --optimize-autoloader
+
+# 6. Asegura permisos
+RUN chown -R www-data:www-data storage bootstrap/cache
 
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
