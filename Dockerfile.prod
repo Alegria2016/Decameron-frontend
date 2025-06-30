@@ -16,6 +16,9 @@ RUN apk add --no-cache \
     libzip-dev \
     && docker-php-ext-install pdo pdo_pgsql zip
 
+# En tu etapa builder:
+RUN composer install --no-dev --optimize-autoloader --no-scripts --prefer-dist
+
 # 2. Copia las dependencias de Composer desde la etapa builder
 COPY --from=builder /app/vendor /var/www/html/vendor
 
