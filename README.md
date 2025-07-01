@@ -1,6 +1,39 @@
-# Decameron-frontend
+# Documentación del Sistema de Gestión Hotelera
 
-This template should help get you started developing with Vue 3 in Vite.
+Sistema para la gestión de hoteles desarrollado en VUE 3 y Laravel 12x.
+
+Frontend
+Framework: Vue 3 (Composition API)
+
+UI: PrimeVue o Element Plus
+
+Estado: Pinia
+
+HTTP: Axios
+
+Validación: Vuelidate
+
+Backend
+Lenguaje: PHP 8.2
+
+Framework: Laravel 12
+
+Base de datos: PostgreSQL 15
+
+Autenticación: Sanctum.
+
+Infraestructura
+Hosting: Render.com (Frontend + Backend)
+
+CI/CD: GitHub Actions
+
+Registrar hoteles con datos básicos y tributarios
+
+Asignar tipos de habitación con sus respectivas acomodaciones
+
+Validar configuraciones según reglas de negocio
+
+Gestionar el inventario de habitaciones
 
 ## Recommended IDE Setup
 
