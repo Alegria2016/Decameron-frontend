@@ -39,7 +39,7 @@ Hosting: Render.com (Frontend + Backend)
 
 CI/CD: GitHub Actions
 
-Modelo de Datos (Diagrama UML)
+## Modelo de Datos (Diagrama UML)
 
 ![DIAGRAMA ULM](https://github.com/user-attachments/assets/8cb44e4b-b68b-4d97-8bc8-85c4d2097422)
 
