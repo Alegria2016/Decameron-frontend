@@ -2,6 +2,16 @@
 
 Sistema para la gestión de hoteles desarrollado en VUE 3 y Laravel 12x.
 
+La aplicacion cuenta con las siguientes funciones:
+
+Registrar hoteles con datos básicos y tributarios
+
+Asignar tipos de habitación con sus respectivas acomodaciones
+
+Validar configuraciones según reglas de negocio
+
+Gestionar el inventario de habitaciones.
+
 Frontend
 Framework: Vue 3 (Composition API)
 
@@ -27,13 +37,7 @@ Hosting: Render.com (Frontend + Backend)
 
 CI/CD: GitHub Actions
 
-Registrar hoteles con datos básicos y tributarios
 
-Asignar tipos de habitación con sus respectivas acomodaciones
-
-Validar configuraciones según reglas de negocio
-
-Gestionar el inventario de habitaciones
 
 ## Recommended IDE Setup
 
