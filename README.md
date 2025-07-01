@@ -68,7 +68,8 @@ Ambientes de Desarrollo Frontend VUE (Recomentadion Tener instalado Composer par
 3) Ejecutar comando ```sh npm install ``` para instalar dependencias.
 5) Configurar variables de Entornos en el archivo .env (Especificar endPoint donde esta corriendo el backend)
 6) Una vez se especifique variables de entorno ejecutar los siguientes comandos para las migraciones: ```npm run dev```
-7) Una vez se ejecute el comando le muestra la url donde esta corriendo la aplicacion
+7) Una vez se ejecute el comando le muestra la url donde esta corriendo la aplicacion.
+   
    ![image](https://github.com/user-attachments/assets/d25d28c7-dc35-40c0-8a00-0cac147c131f)
 
 
