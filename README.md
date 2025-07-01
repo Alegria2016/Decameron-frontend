@@ -12,11 +12,12 @@ Validar configuraciones según reglas de negocio
 
 Gestionar el inventario de habitaciones.
 
-Frontend
+Frontend 
+https://decameron-frontend.onrender.com/hotels
+
 Framework: Vue 3 (Composition API)
 
-UI: PrimeVue o Element Plus
-
+UI: Vue
 Estado: Pinia
 
 HTTP: Axios
