@@ -68,10 +68,24 @@ Ambientes de Desarrollo Frontend VUE (Recomentadion Tener instalado Composer par
 3) Ejecutar comando ```sh npm install ``` para instalar dependencias.
 5) Configurar variables de Entornos en el archivo .env (Especificar endPoint donde esta corriendo el backend)
 6) Una vez se especifique variables de entorno ejecutar los siguientes comandos para las migraciones: ```npm run dev```
-7) Una vez se ejecute el comando le muestra la url donde esta corriendo la aplicacion ![image](https://github.com/user-attachments/assets/d25d28c7-dc35-40c0-8a00-0cac147c131f)
+7) Una vez se ejecute el comando le muestra la url donde esta corriendo la aplicacion
+   ![image](https://github.com/user-attachments/assets/d25d28c7-dc35-40c0-8a00-0cac147c131f)
 
 
 
 
 ### Desplegar en Docker.
+
+Ambientes de Desarrollo
+
+1) Clonar Repositorio: https://github.com/Alegria2016/backend-decameron-app o para el repo del front.
+2) Una vez clonado revise variables de entorno de conexion a Base de Datos y demas.
+3) Luego abrir Docker Desktop y abrir consola de comandos PowerShell y ejecutar el siguiente comando  ```wsl ```
+   El anterior comando espara que le permita ejecutar comandos curl.
+5) Si se hizo correctamente, la consola cambia de apaciencia, luego ejecute el siguiente comando  ``` ./vendor/bin/sail up -d ```
+6) El comando anterio le permite iniciar el contenedor luego ejecute el siguient comando para hacer migraciones ```./vendor/bin/sail artisan migrate```
+7) Una vez se ejecute las migraciones puede validarlo ejecutando el siguiente comando: ```./vendor/bin/sail artisan migrate:status ```.
+8) Si todo sale correctamente cargue los datos de inicio de la aplicacion ejecutando el siguiente comando: ```./vendor/bin/sail artisan migrate:fresh --seed ```.
+9) En este punto revisar acceso a la aplicacion que por defecto http://127.0.0.1:8000 para ser consumida la aplicacion.
+  
 
