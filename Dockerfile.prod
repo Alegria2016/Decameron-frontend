@@ -12,6 +12,8 @@ RUN npm install
 
 RUN rm -rf node_modules && npm install
 
+ENV NODE_OPTIONS="--max-old-space-size=512"
+
 # Copia el resto de los archivos y construye
 COPY . .
 RUN npm run build
