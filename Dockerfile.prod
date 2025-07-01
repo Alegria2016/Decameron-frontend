@@ -1,0 +1,30 @@
+# Etapa 1: Construcción de la aplicación Vue
+FROM node:18-alpine as builder
+
+WORKDIR /app
+
+# Copia archivos de configuración (cacheables)
+COPY package*.json ./
+COPY vite.config.js ./
+
+# Instala dependencias
+RUN npm install
+
+# Copia el resto de los archivos y construye
+COPY . .
+RUN npm run build
+
+# Etapa 2: Servidor de producción ligero
+FROM nginx:alpine
+
+# Copia los archivos construidos desde la etapa anterior
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Configuración personalizada de Nginx (opcional)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Puerto expuesto (Render usa automáticamente el 10000)
+EXPOSE 10000
+
+# Inicia Nginx
+CMD ["nginx", "-g", "daemon off;"]
