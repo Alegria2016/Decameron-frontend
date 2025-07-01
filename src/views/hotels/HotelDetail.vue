@@ -91,9 +91,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import Header from '@/components/Header.vue'
-import hotelService from '@/api/hotelService'
-import roomService from '@/api/roomService'
+import Header from '../../components/Header.vue'
+import hotelService from '../../api/hotelService'
+import roomService from '../../api/roomService'
 
 const route = useRoute()
 const id = route.params.id

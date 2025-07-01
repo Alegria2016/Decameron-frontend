@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import HotelIndex from '@/views/hotels/HotelIndex.vue';
-import HotelDetail from '@/views/hotels/HotelDetail.vue';
+import HotelIndex from '../views/hotels/HotelIndex.vue';
+import HotelDetail from '../views/hotels/HotelDetail.vue';
+import RoomIndex from '../views/rooms/RoomIndex.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -25,7 +26,7 @@ const router = createRouter({
     {
       path: '/rooms',
       name: 'rooms',
-      component: () => import('@/views/rooms/RoomIndex.vue')
+      component: RoomIndex
     }
   ]
 });

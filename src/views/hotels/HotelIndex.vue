@@ -48,10 +48,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import HotelCard from '@/components/hotels/HotelCard.vue'
-import Header from '@/components/Header.vue'
-import hotelService from '@/api/hotelService'
-import HotelFormModal from '@/components/hotels/HotelFormModal.vue'
+import HotelCard from '../../components/hotels/HotelCard.vue'
+import Header from '../Home.vue'
+import hotelService from '../../api/hotelService'
+import HotelFormModal from '../../components/hotels/HotelFormModal.vue'
 
 const loading = ref(true)
 const error = ref(null)
