@@ -44,23 +44,17 @@ CI/CD: GitHub Actions
 
 ![DIAGRAMA ULM](https://github.com/user-attachments/assets/8cb44e4b-b68b-4d97-8bc8-85c4d2097422)
 
+## Despliegue en Diferentes Amnbientes.
 
+Ambientes de Desarrollo (Recomentadion Tener instalado Composer para ejecucion de comandos preferiblente Laragon que ya cuenta con todas las herramientas necesarias.)
+1) Clonar Repositorio: https://github.com/Alegria2016/backend-decameron-app
+2) Una vez clonado el repositorio ubicarse dentro de la carpeta del proyecto y abrir ventana de comandos.
+3) Ejecutar comando ```npm install para instalar dependencias.
+4) Configurar valriables de Entornos en el archivo .env (Especificar Nombre de base de Postgresql, usuarios y contraseña)
+5) Una vez se especifique variables de entorno ejecutar los siguientes comandos para las migraciones: php artisan migrate
+6) Carga de datos previos de las tablas Tipos de Habitaciones, Acomodaciones y la relacion entre las dos tablas. 
+7) Una vez Ejecutada las migraciones iniciar la aplicacion con el siguiente comando php artisan serve.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
