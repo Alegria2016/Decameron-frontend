@@ -4,7 +4,7 @@
       <!-- Logo -->
       <router-link to="/" class="logo">
         <img src="../assets/logo.svg" alt="Hotel Logo" class="logo-img">
-        <span class="logo-text">Hotel Management</span>
+        <span class="logo-text">Administracion de Hoteles Decameron</span>
       </router-link>
 
       <!-- Menú para desktop -->
