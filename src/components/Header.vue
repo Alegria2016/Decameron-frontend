@@ -13,9 +13,7 @@
           <li class="nav-item">
             <router-link to="/hotels" class="nav-link">Hoteles</router-link>
           </li>
-           <li class="nav-item">
-            <router-link to="/rooms" class="nav-link">Habitaciones</router-link>
-          </li>
+           
         </ul>
       </nav>
 
