@@ -23,6 +23,8 @@ HTTP: Axios
 
 Validación: Vuelidate
 
+## Lenguales usados en el desarrollo.
+
 Backend
 Lenguaje: PHP 8.2
 
