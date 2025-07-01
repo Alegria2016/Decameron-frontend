@@ -3,19 +3,16 @@ FROM node:18-alpine as builder
 
 WORKDIR /app
 
-# Copia archivos de configuración (cacheables)
-COPY package*.json ./
-COPY vite.config.js ./
+# 1. Copia solo los archivos esenciales primero
+COPY package*.json .
+COPY vite.config.js .
 
-# Instala dependencias
-RUN npm install
+# 2. Instala dependencias con verbose
+RUN npm install --loglevel verbose
 
-# Copia el resto de los archivos y construye
+# 3. Copia el resto y construye con debug
 COPY . .
-RUN npm run build
-
-# Etapa 2: Servidor de producción ligero
-FROM nginx:alpine
+RUN npm run build --verbose
 
 # Copia los archivos construidos desde la etapa anterior
 COPY --from=builder /app/dist /usr/share/nginx/html
