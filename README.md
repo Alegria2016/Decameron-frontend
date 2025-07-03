@@ -12,7 +12,7 @@ Validar configuraciones según reglas de negocio
 
 Gestionar el inventario de habitaciones.
 
-Frontend 
+Frontend Demo:
 https://decameron-frontend.onrender.com/hotels
 
 ![image](https://github.com/user-attachments/assets/cc58af7c-9525-4129-a59c-52dc819a0cdc)
